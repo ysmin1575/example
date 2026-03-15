@@ -46,7 +46,7 @@ cursor:pointer;
 }
 
 .hero{
-height:80vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -71,6 +71,46 @@ border-radius:30px;
 color:white;
 cursor:pointer;
 }
+
+/* 업데이트 박스 */
+
+.update-box{
+width:100%;
+display:flex;
+justify-content:center;
+margin-top:20px;
+}
+
+.update{
+background:#1e293b;
+padding:20px 40px;
+border-radius:12px;
+max-width:600px;
+text-align:center;
+}
+
+.update h3{
+margin-top:0;
+color:#a78bfa;
+}
+
+/* 피드백 버튼 */
+
+.feedback{
+position:fixed;
+bottom:25px;
+right:25px;
+}
+
+.feedback button{
+background:#7c3aed;
+border:none;
+padding:12px 18px;
+border-radius:30px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -79,7 +119,7 @@ cursor:pointer;
 
 <nav>
 
-<div class="logo">SLIDR</div>
+<div class="logo">Example</div>
 
 <div class="menu">
 <button onclick="location.href='/generator'">PPT 만들기</button>
@@ -97,5 +137,20 @@ cursor:pointer;
 
 </div>
 
+<div class="update-box">
+<div class="update">
+<h3>🚀 업데이트 예정</h3>
+<p>AI가 조사 내용을 자동 요약하여 PPT 슬라이드를 생성하는 기능이 추가될 예정입니다.</p>
+</div>
+</div>
+
+<div class="feedback">
+<button onclick="alert('피드백 기능은 곧 추가됩니다!')">
+💬 피드백
+</button>
+</div>
+
+</body>
+</html>
 </body>
 </html>
