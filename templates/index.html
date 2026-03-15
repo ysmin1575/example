@@ -5,10 +5,8 @@
 <title>SLIDR</title>
 
 <style>
-
 :root{
 --main:#7c3aed;
---light:#a78bfa;
 --bg:#0f172a;
 }
 
@@ -17,26 +15,7 @@ margin:0;
 font-family:Arial;
 background:linear-gradient(120deg,#0f172a,#111827);
 color:white;
-overflow-x:hidden;
 }
-
-/* GRID BACKGROUND */
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-background-size:40px 40px;
-z-index:-1;
-}
-
-/* NAVBAR */
 
 nav{
 display:flex;
@@ -57,23 +36,14 @@ gap:30px;
 align-items:center;
 }
 
-.menu a{
-text-decoration:none;
-color:white;
-opacity:0.8;
-}
-
 .menu button{
 background:var(--main);
 border:none;
 padding:10px 20px;
 border-radius:20px;
 color:white;
-font-weight:bold;
 cursor:pointer;
 }
-
-/* HERO */
 
 .hero{
 height:80vh;
@@ -81,7 +51,6 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
 }
 
 .hero h1{
@@ -93,80 +62,38 @@ margin:0;
 color:var(--main);
 }
 
-.subtitle{
-margin-top:10px;
-opacity:0.8;
-}
-
-.desc{
-margin-top:20px;
-opacity:0.7;
-}
-
-.buttons{
-margin-top:30px;
-display:flex;
-gap:20px;
-}
-
 .btn-main{
+margin-top:30px;
 background:var(--main);
 padding:15px 30px;
 border:none;
 border-radius:30px;
-font-size:16px;
 color:white;
 cursor:pointer;
 }
-
-.btn-sub{
-border:2px solid var(--main);
-padding:15px 30px;
-border-radius:30px;
-background:none;
-color:white;
-cursor:pointer;
-}
-
 </style>
+
 </head>
 
 <body>
 
 <nav>
 
-<div class="logo">Exsemple</div>
+<div class="logo">SLIDR</div>
 
 <div class="menu">
-<a href="#">기능</a>
-<a href="#">업데이트</a>
-<a href="#">피드백</a>
-<button>PPT 만들기</button>
+<button onclick="location.href='/generator'">PPT 만들기</button>
 </div>
 
 </nav>
 
-
 <div class="hero">
 
-<h1>SLI<span>Exsemple</span></h1>
+<h1>SLI<span>DR</span></h1>
 
-<div class="subtitle">
-믿어. 네 아이디어를.
-</div>
-
-<div class="desc">
-주제와 내용을 입력하면 AI가 핵심을 정리하고  
-발표용 PPT를 자동으로 만들어 드립니다.
-</div>
-
-<div class="buttons">
-
-<button class="btn-main">✨ PPT 바로 만들기</button>
-
-<button class="btn-sub">서비스 둘러보기</button>
-
-</div>
+<button class="btn-main" onclick="location.href='/generator'">
+✨ PPT 바로 만들기
+</button>
 
 </div>
 
