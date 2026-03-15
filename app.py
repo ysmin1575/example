@@ -9,6 +9,12 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+
+@app.route("/generator")
+def generator():
+    return render_template("generator.html")
+
+
 @app.route("/generate", methods=["POST"])
 def generate():
 
@@ -47,6 +53,7 @@ def generate():
         download_name="presentation.pptx",
         mimetype="application/vnd.openxmlformats-officedocument.presentationml.presentation"
     )
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
