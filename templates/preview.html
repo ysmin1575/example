@@ -22,12 +22,11 @@ background:white;
 padding:40px;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
-white-space:pre-line;
 }
 
 button{
-margin-top:30px;
-background:#15803d;
+margin-top:20px;
+background:#a855f7;
 color:white;
 padding:12px 30px;
 border:none;
@@ -45,15 +44,19 @@ cursor:pointer;
 
 <div class="card">
 
-<h2>AI 슬라이드 미리보기</h2>
-
-<p>{{result}}</p>
+<h2>슬라이드 미리보기</h2>
 
 <form action="/generate" method="post">
 
 <input type="hidden" name="title" value="{{title}}">
 <input type="hidden" name="name" value="{{name}}">
-<input type="hidden" name="result" value="{{result}}">
+
+{% for s in slides %}
+
+<p>{{s}}</p>
+<input type="hidden" name="slides" value="{{s}}">
+
+{% endfor %}
 
 <button type="submit">
 PPT 다운로드
