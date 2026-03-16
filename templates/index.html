@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>SLIDR</title>
@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0f172a;
+background:#0f0f1a;
 color:white;
 }
 
@@ -20,18 +20,9 @@ padding:20px 60px;
 }
 
 .logo{
-font-size:24px;
+font-size:26px;
 font-weight:bold;
-color:#7c3aed;
-}
-
-.menu button{
-background:#7c3aed;
-border:none;
-padding:10px 20px;
-border-radius:20px;
-color:white;
-cursor:pointer;
+color:#a855f7;
 }
 
 .hero{
@@ -40,21 +31,22 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+text-align:center;
 }
 
 .hero h1{
-font-size:80px;
+font-size:70px;
 margin:0;
 }
 
 .hero span{
-color:#7c3aed;
+color:#a855f7;
 }
 
-.btn-main{
+.main-btn{
 margin-top:30px;
-padding:15px 35px;
-background:#7c3aed;
+padding:15px 40px;
+background:#a855f7;
 border:none;
 border-radius:30px;
 color:white;
@@ -64,8 +56,8 @@ cursor:pointer;
 
 .feedback{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 }
 
 .feedback input{
@@ -75,43 +67,30 @@ border:none;
 }
 
 .feedback button{
-padding:10px 15px;
+background:#a855f7;
 border:none;
-background:#7c3aed;
-color:white;
+padding:10px 15px;
 border-radius:20px;
-cursor:pointer;
+color:white;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
 <div class="logo">SLIDR</div>
-
-<div class="menu">
-<button onclick="location.href='/generator'">
-PPT 만들기
-</button>
-</div>
-
 </nav>
 
 <div class="hero">
 
-<h1>SLI<span>DR</span></h1>
+<h1>AI PPT <span>Generator</span></h1>
+<p>몇 초 만에 발표 슬라이드를 만드세요</p>
 
-<p>AI 기반 PPT 자동 생성 서비스</p>
-
-<button class="btn-main"
+<button class="main-btn"
 onclick="location.href='/generator'">
-
-✨ PPT 바로 만들기
-
+PPT 만들기
 </button>
 
 </div>
@@ -120,14 +99,8 @@ onclick="location.href='/generator'">
 
 <form action="/feedback" method="post">
 
-<input
-type="text"
-name="message"
-placeholder="피드백"
-required
->
-
-<button type="submit">보내기</button>
+<input name="message" placeholder="피드백 보내기" required>
+<button type="submit">전송</button>
 
 </form>
 
