@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: ppt-generator
-    env: python
-    plan: free
+    name: slidr
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
