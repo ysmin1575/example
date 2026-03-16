@@ -175,7 +175,7 @@ def feedback():
 
         try:
 
-            url = "https://script.google.com/macros/s/AKfycbxScBsoVAwpMCafAd7nru0WC9JtwyDHySBuzH3jdmPDB_3hHjjaezogGKeXk4m_J_GhxA/exec"
+            url = "https://script.google.com/macros/s/AKfycbzYOD_D8KfUUKPB5r-_zBBtUCOMeR9SPfxOfqSufTvR814unuYT4pi5lWRwE7fc1IuImA/exec"
 
             requests.post(url, json={
                 "message": message
