@@ -15,6 +15,24 @@ try:
 except:
     client = None
 
+import re
+
+def clean_slide_text(text):
+    text = text.strip()
+
+    # 번호 목록 제거 (1. 2. 등)
+    text = re.sub(r'^\d+\.\s*', '', text)
+
+    # -, • 같은 기호 제거
+    text = re.sub(r'^[-•]\s*', '', text)
+
+    # 마크다운 기호 제거
+    text = text.replace("**","").replace("`","")
+
+    # _XXXX_ 같은 이상한 토큰 제거
+    text = re.sub(r'_[A-Za-z0-9]+_', '', text)
+
+    return text.strip()
 
 app = Flask(__name__)
 
