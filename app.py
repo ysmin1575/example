@@ -79,8 +79,21 @@ def preview():
         # AI 없으면 기본 분리
         result = content.split("\n")
 
-    slides = [s for s in result if s.strip()]
+result = response.choices[0].message.content.split("\n")
 
+import re
+
+slides = []
+
+for s in result:
+    s = s.strip()
+    s = re.sub(r'_[A-Za-z0-9]+_', '', s)
+    s = re.sub(r'^\d+\.\s*', '', s)
+    s = re.sub(r'^[-•]\s*', '', s)
+    s = s.replace("**","").replace("`","")
+
+    if s:
+        slides.append(s)
     return render_template(
         "preview.html",
         title=title,
