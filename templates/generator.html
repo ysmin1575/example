@@ -7,7 +7,6 @@
 <style>
 
 body{
-margin:0;
 font-family:Arial;
 background:#f3f4f6;
 }
@@ -25,71 +24,26 @@ border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-h2{
-margin-top:0;
-}
-
-input, textarea{
-
+input,textarea,select{
 width:100%;
 padding:15px;
-
-border-radius:10px;
-border:1px solid #ddd;
-
 margin-top:10px;
 margin-bottom:20px;
-
-font-size:16px;
+border-radius:10px;
+border:1px solid #ddd;
 }
 
 textarea{
 height:200px;
-resize:none;
 }
 
 button{
-
 background:#15803d;
 color:white;
-
 padding:12px 30px;
-
 border:none;
 border-radius:25px;
-
 cursor:pointer;
-font-size:16px;
-}
-
-.steps{
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:30px;
-}
-
-.step{
-
-width:35px;
-height:35px;
-
-border-radius:50%;
-
-background:#15803d;
-color:white;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-weight:bold;
-}
-
-.line{
-width:80px;
-height:3px;
-background:#ddd;
 }
 
 </style>
@@ -100,39 +54,32 @@ background:#ddd;
 
 <div class="container">
 
-<div class="steps">
-
-<div class="step">1</div>
-<div class="line"></div>
-
-<div class="step" style="background:#ddd;color:black;">2</div>
-<div class="line"></div>
-
-<div class="step" style="background:#ddd;color:black;">3</div>
-<div class="line"></div>
-
-<div class="step" style="background:#ddd;color:black;">4</div>
-
-</div>
-
 <div class="card">
 
 <h2>PPT 자동 제작</h2>
 
-<form action="/generate" method="post">
+<form action="/preview" method="post">
 
 <label>발표 주제</label>
-<input name="title" placeholder="예: 지구온난화">
+<input name="title">
 
 <label>조사 내용</label>
-<textarea name="content"
-placeholder="조사한 내용을 붙여넣으세요"></textarea>
+<textarea name="content"></textarea>
 
 <label>학번 / 이름</label>
-<input name="name" placeholder="예: 30101 홍길동">
+<input name="name">
+
+<label>PPT 스타일</label>
+<select name="template">
+
+<option>발표 스타일</option>
+<option>보고서 스타일</option>
+<option>학교 발표</option>
+
+</select>
 
 <button type="submit">
-PPT 생성
+AI 미리보기 생성
 </button>
 
 </form>
