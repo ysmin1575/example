@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file, redirect, url_for
 from pptx import Presentation
 import io
 import os
+import requests
 
 # Groq 선택적 로딩 (API 키 없어도 서버 실행됨)
 try:
@@ -143,8 +144,16 @@ def feedback():
     message = request.form.get("message")
 
     if message:
-        with open("feedback.txt","a",encoding="utf-8") as f:
-            f.write(message+"\n")
+
+        try:
+            url = "https://script.google.com/macros/s/AKfycbxScBsoVAwpMCafAd7nru0WC9JtwyDHySBuzH3jdmPDB_3hHjjaezogGKeXk4m_J_GhxA/exec"
+
+            requests.post(url, json={
+                "message": message
+            })
+
+        except:
+            pass
 
     return redirect(url_for("home"))
 
