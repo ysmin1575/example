@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>PPT 생성</title>
@@ -8,7 +8,7 @@
 
 body{
 font-family:Arial;
-background:#f3f4f6;
+background:#f5f3ff;
 }
 
 .container{
@@ -20,11 +20,11 @@ padding:40px;
 .card{
 background:white;
 padding:40px;
-border-radius:15px;
+border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-input,textarea,select{
+input,textarea{
 width:100%;
 padding:15px;
 margin-top:10px;
@@ -38,7 +38,7 @@ height:200px;
 }
 
 button{
-background:#15803d;
+background:#a855f7;
 color:white;
 padding:12px 30px;
 border:none;
@@ -56,30 +56,21 @@ cursor:pointer;
 
 <div class="card">
 
-<h2>PPT 자동 제작</h2>
+<h2>PPT 정보 입력</h2>
 
 <form action="/preview" method="post">
 
 <label>발표 주제</label>
-<input name="title">
+<input name="title" required>
 
 <label>조사 내용</label>
-<textarea name="content"></textarea>
+<textarea name="content" required></textarea>
 
 <label>학번 / 이름</label>
-<input name="name">
-
-<label>PPT 스타일</label>
-<select name="template">
-
-<option>발표 스타일</option>
-<option>보고서 스타일</option>
-<option>학교 발표</option>
-
-</select>
+<input name="name" required>
 
 <button type="submit">
-AI 미리보기 생성
+미리보기 생성
 </button>
 
 </form>
