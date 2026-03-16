@@ -60,7 +60,7 @@ def feedback():
     with open("feedback.txt", "a", encoding="utf-8") as f:
         f.write(message + "\n")
 
-    return render_template("index.html")
+    return "ok"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
