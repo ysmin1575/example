@@ -46,6 +46,48 @@ border-radius:25px;
 cursor:pointer;
 }
 
+/* 단계 UI */
+
+.steps{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:40px;
+gap:20px;
+}
+
+.step-item{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.step-circle{
+width:40px;
+height:40px;
+border-radius:50%;
+background:#a855f7;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:16px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.step-text{
+font-size:14px;
+font-weight:600;
+color:#6b21a8;
+}
+
+.step-line{
+width:60px;
+height:3px;
+background:#e9d5ff;
+}
+
 </style>
 
 </head>
@@ -55,6 +97,38 @@ cursor:pointer;
 <div class="container">
 
 <div class="card">
+  
+<!-- 단계 UI -->
+
+<div class="steps">
+
+<div class="step-item">
+<div class="step-circle">1</div>
+<div class="step-text">정보 입력</div>
+</div>
+
+<div class="step-line"></div>
+
+<div class="step-item">
+<div class="step-circle" style="background:#ddd;color:#555;">2</div>
+<div class="step-text" style="color:#999;">AI 분석</div>
+</div>
+
+<div class="step-line"></div>
+
+<div class="step-item">
+<div class="step-circle" style="background:#ddd;color:#555;">3</div>
+<div class="step-text" style="color:#999;">슬라이드 생성</div>
+</div>
+
+<div class="step-line"></div>
+
+<div class="step-item">
+<div class="step-circle" style="background:#ddd;color:#555;">4</div>
+<div class="step-text" style="color:#999;">다운로드</div>
+</div>
+
+</div>
 
 <h2>PPT 정보 입력</h2>
 
