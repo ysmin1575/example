@@ -34,8 +34,8 @@ def preview():
 
     title = request.form.get("title")
     name = request.form.get("name")
-    content = request.form.get("content")
-
+    content = request.form.get("content", "")
+    
     # AI 사용 가능
     if client:
 
