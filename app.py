@@ -9,11 +9,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-
 @app.route("/generator")
 def generator():
     return render_template("generator.html")
-
 
 @app.route("/generate", methods=["POST"])
 def generate():
@@ -54,6 +52,15 @@ def generate():
         mimetype="application/vnd.openxmlformats-officedocument.presentationml.presentation"
     )
 
+@app.route("/feedback", methods=["POST"])
+def feedback():
+
+    message = request.form.get("message")
+
+    with open("feedback.txt", "a", encoding="utf-8") as f:
+        f.write(message + "\n")
+
+    return render_template("index.html")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
